@@ -38,3 +38,6 @@ ENV/
 *.swp
 *.swo
 📌 **Task:**.md
+backups/countries.jsonl.20250320_162938.bak
+countries.jsonl.lock
+.gitignore

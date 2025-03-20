@@ -13,11 +13,13 @@ from .utils import setup_logger
 logger = setup_logger("scraper")
 
 USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:90.0) Gecko/20100101 Firefox/90.0'
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1'
 ]
 
 class GeoNamesScraper:
@@ -67,13 +69,21 @@ class GeoNamesScraper:
             raise ValueError("Could not find the countries table in the HTML")
         
         rows = table.find_all('tr')
-        headers = [th.text.strip() for th in rows[0].find_all('th')]
+        
+        # Extract headers and normalize them
+        headers_row = rows[0]
+        headers = []
+        for th in headers_row.find_all('th'):
+            # Replace <br> with space and get the text
+            for br in th.find_all('br'):
+                br.replace_with(' ')
+            headers.append(th.text.strip())
         
         # Clean up header names for JSON
         header_mapping = {
-            'ISO-3166\nalpha2': 'iso_alpha2',
-            'ISO-3166\nalpha3': 'iso_alpha3',
-            'ISO-3166\nnumeric': 'iso_numeric',
+            'ISO-3166 alpha2': 'iso_alpha2',
+            'ISO-3166 alpha3': 'iso_alpha3',
+            'ISO-3166 numeric': 'iso_numeric',
             'fips': 'fips',
             'Country': 'country_name',
             'Capital': 'capital',
@@ -82,13 +92,15 @@ class GeoNamesScraper:
             'Continent': 'continent'
         }
         
+        mapped_headers = [header_mapping.get(h, h.lower().replace(' ', '_')) for h in headers]
+        
         countries = []
         for row in rows[1:]:  # Skip header row
             cells = row.find_all('td')
             if len(cells) == len(headers):
                 country = {}
                 for i, cell in enumerate(cells):
-                    key = header_mapping.get(headers[i], headers[i].lower().replace(' ', '_'))
+                    key = mapped_headers[i]
                     value = cell.text.strip()
                     
                     # Convert numeric values

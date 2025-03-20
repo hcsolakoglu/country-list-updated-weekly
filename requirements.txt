@@ -1,3 +1,6 @@
 requests==2.31.0
 beautifulsoup4==4.12.2
 backoff==2.2.1
+# Add dependencies that were missing
+lxml==4.9.3     # For more robust HTML parsing
+filelock==3.12.2  # For file locking
