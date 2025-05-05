@@ -247,4 +247,4 @@
 {"iso_alpha2": "YT", "iso_alpha3": "MYT", "iso_numeric": "175", "fips": "MF", "country_name": "Mayotte", "capital": "Mamoudzou", "area_km2": 374.0, "population": 279471, "continent": "AF"}
 {"iso_alpha2": "ZA", "iso_alpha3": "ZAF", "iso_numeric": "710", "fips": "SF", "country_name": "South Africa", "capital": "Pretoria", "area_km2": 1219912.0, "population": 57779622, "continent": "AF"}
 {"iso_alpha2": "ZM", "iso_alpha3": "ZMB", "iso_numeric": "894", "fips": "ZA", "country_name": "Zambia", "capital": "Lusaka", "area_km2": 752614.0, "population": 17351822, "continent": "AF"}
-{"iso_alpha2": "ZW", "iso_alpha3": "ZWE", "iso_numeric": "716", "fips": "ZI", "country_name": "Zimbabwe", "capital": "Harare", "area_km2": 390580.0, "population": 14439018, "continent": "AF"}
+{"iso_alpha2": "ZW", "iso_alpha3": "ZWE", "iso_numeric": "716", "fips": "ZI", "country_name": "Zimbabwe", "capital": "Harare", "area_km2": 390580.0, "population": 16868409, "continent": "AF"}
