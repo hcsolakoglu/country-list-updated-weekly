@@ -4,7 +4,7 @@
 {"iso_alpha2": "AG", "iso_alpha3": "ATG", "iso_numeric": "028", "fips": "AC", "country_name": "Antigua and Barbuda", "capital": "St. John's", "area_km2": 443.0, "population": 96286, "continent": "NA"}
 {"iso_alpha2": "AI", "iso_alpha3": "AIA", "iso_numeric": "660", "fips": "AV", "country_name": "Anguilla", "capital": "The Valley", "area_km2": 102.0, "population": 13254, "continent": "NA"}
 {"iso_alpha2": "AL", "iso_alpha3": "ALB", "iso_numeric": "008", "fips": "AL", "country_name": "Albania", "capital": "Tirana", "area_km2": 28748.0, "population": 2866376, "continent": "EU"}
-{"iso_alpha2": "AM", "iso_alpha3": "ARM", "iso_numeric": "051", "fips": "AM", "country_name": "Armenia", "capital": "Yerevan", "area_km2": 29800.0, "population": 2991200, "continent": "AS"}
+{"iso_alpha2": "AM", "iso_alpha3": "ARM", "iso_numeric": "051", "fips": "AM", "country_name": "Armenia", "capital": "Yerevan", "area_km2": 29800.0, "population": 3076200, "continent": "AS"}
 {"iso_alpha2": "AO", "iso_alpha3": "AGO", "iso_numeric": "024", "fips": "AO", "country_name": "Angola", "capital": "Luanda", "area_km2": 1246700.0, "population": 30809762, "continent": "AF"}
 {"iso_alpha2": "AQ", "iso_alpha3": "ATA", "iso_numeric": "010", "fips": "AY", "country_name": "Antarctica", "capital": "", "area_km2": 14000000.0, "population": 0, "continent": "AN"}
 {"iso_alpha2": "AR", "iso_alpha3": "ARG", "iso_numeric": "032", "fips": "AR", "country_name": "Argentina", "capital": "Buenos Aires", "area_km2": 2766890.0, "population": 44494502, "continent": "SA"}
@@ -92,7 +92,7 @@
 {"iso_alpha2": "GU", "iso_alpha3": "GUM", "iso_numeric": "316", "fips": "GQ", "country_name": "Guam", "capital": "Hagatna", "area_km2": 549.0, "population": 165768, "continent": "OC"}
 {"iso_alpha2": "GW", "iso_alpha3": "GNB", "iso_numeric": "624", "fips": "PU", "country_name": "Guinea-Bissau", "capital": "Bissau", "area_km2": 36120.0, "population": 1874309, "continent": "AF"}
 {"iso_alpha2": "GY", "iso_alpha3": "GUY", "iso_numeric": "328", "fips": "GY", "country_name": "Guyana", "capital": "Georgetown", "area_km2": 214970.0, "population": 779004, "continent": "SA"}
-{"iso_alpha2": "HK", "iso_alpha3": "HKG", "iso_numeric": "344", "fips": "HK", "country_name": "Hong Kong", "capital": "Hong Kong", "area_km2": 1092.0, "population": 7491609, "continent": "AS"}
+{"iso_alpha2": "HK", "iso_alpha3": "HKG", "iso_numeric": "344", "fips": "HK", "country_name": "Hong Kong", "capital": "Hong Kong", "area_km2": 1092.0, "population": 7396076, "continent": "AS"}
 {"iso_alpha2": "HM", "iso_alpha3": "HMD", "iso_numeric": "334", "fips": "HM", "country_name": "Heard and McDonald Islands", "capital": "", "area_km2": 412.0, "population": 0, "continent": "AN"}
 {"iso_alpha2": "HN", "iso_alpha3": "HND", "iso_numeric": "340", "fips": "HO", "country_name": "Honduras", "capital": "Tegucigalpa", "area_km2": 112090.0, "population": 9587522, "continent": "NA"}
 {"iso_alpha2": "HR", "iso_alpha3": "HRV", "iso_numeric": "191", "fips": "HR", "country_name": "Croatia", "capital": "Zagreb", "area_km2": 56542.0, "population": 3871833, "continent": "EU"}
