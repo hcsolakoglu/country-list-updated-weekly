@@ -65,3 +65,7 @@ python -m src.main
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## License
+
+Code: MIT, see [LICENSE](LICENSE). Fetched GeoNames data remains subject to the GeoNames terms (Creative Commons Attribution 4.0); credit GeoNames when you reuse it.
